@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#require 'faker'
+array = ["chinese", "italian", "japanese", "french", "belgian"]
+
+ 10.times do
+
+  restaurant = Restaurant.create!(
+    name: Faker::TvShows::SouthPark.character,
+    address: Faker::Movies::StarWars.planet,
+    category: array.sample)
+end
